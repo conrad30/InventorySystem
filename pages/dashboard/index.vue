@@ -58,6 +58,14 @@ grey: 'rgb(201, 203, 207)'
 
 
 export default {
+
+transition:{
+name:"inventory",
+mode:"out-in",
+duration: { enter: 1000, leave: 500 },
+enterActiveClass: "animated fadeIn",
+leaveActiveClass: "animated fadeOut"
+},
 layout: "dashboard",
 components:{
 ContentCard,

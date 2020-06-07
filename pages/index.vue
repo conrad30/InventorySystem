@@ -56,6 +56,14 @@ import Logo from '~/components/Items/Logo.vue'
 import InputElement from  "~/components/Items/Input.vue";
 
 export default {
+transition:{
+name:"inventory",
+mode:"out-in",
+duration: { enter: 1000, leave: 500 },
+enterActiveClass: "animated fadeIn",
+leaveActiveClass: "animated fadeOut"
+},
+
   components: {
     Logo,
     InputElement
@@ -114,4 +122,8 @@ export default {
 .links {
   padding-top: 15px;
 }
+
+
+
+
 </style>

@@ -13,7 +13,15 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { href: 'https://cdn.jsdelivr.net/npm/animate.css@3.5.1', rel:
+      'stylesheet', type:'text/css'}
+    ],
+    script:[
+      { src: 'https://code.jquery.com/jquery-3.4.1.slim.min.js', type:
+      'text/javascript' },
+      { src: 'https://kit.fontawesome.com/<script src="https://kit.fontawesome.com/bd10c83925.js" crossorigin="anonymous"></script>.js',
+      crossorigin: 'anonymous', type:'text/javascript'},
+      ]
   },
   /*
   ** Customize the progress-bar color
@@ -60,5 +68,13 @@ module.exports = {
     */
     extend (config, ctx) {
     }
+
+
+
+
+
+    
   }
 }
+
+
