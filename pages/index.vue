@@ -42,7 +42,8 @@
   focus:outline-none
 
 
-">SIGN IN</button>
+"
+@click="login">SIGN IN</button>
 
 </form>
 </div>
@@ -70,7 +71,7 @@ export default {
 
  methods:{
    login: function(){
-     this.$routerr.push("/dashboard")
+     this.$router.push("/dashboard")
    }
  }
 

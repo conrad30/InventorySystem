@@ -14,13 +14,13 @@
             </script>
                 
                
-            -->
+            
 <!-- 
 <template>
 <div class="flex flex-col">
-</div>
+</div>-->
 
-</template>-->
+<!-- </template>-->
 
 <template>
 <div class="flex flex-col">
@@ -30,12 +30,14 @@ SALES STATISTICS
 </template>
 <template v-slot:content>
 <div class="w-full overflow-hidden p-2">
-<barChart :chartdata="
+<barChart :chartData="
 revenueMonthly.barChartData"
 :options="revenueMonthly.barChartOptions" :height="120"></barChart>
 </div>
+    </template>
+            </contentCard>
+        </div>
 </template>
-
             
 
 
