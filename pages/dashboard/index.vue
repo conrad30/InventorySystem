@@ -1,29 +1,37 @@
-
-
-<!-- <template>
-    <div class="flex flex-col">
-        </div>
-
-        </template>
-        <script>
-            export default{
-
-                layout: "dashboard",
-            }
-
-            </script>
-                
-               
+<template>
+        <div class="flex 
+            flex-col
+            w-56
+            transition-all
+            duration-500
+            ease-in-out
+            bg-gray-800
+            h-screen
+            shadow-2xl
+            pt-16
+               ">
             
-<!-- 
-<template>
-<div class="flex flex-col">
-</div>-->
+        <menuLink
+        :url="'/dashboard'"
+            :class= "{
+                'text-gray-500':!$route.path.includes('/dashboard'),
+                'text-white':$route.path.includes('/dashboard'),
+                'hover:bg-gray-600':true,
+                'hover:text-white':true
+                        }">
 
-<!-- </template>-->
+        <template v-slot:icon-word>
+            <div class="flex items-centerr justify-start overflow-x-hidden">
+                <i class="fas fa-home ml-6 mr-4"></i>
+                    <label class="flex-shrink-0 ml-2 text-sm font-sans tracking-wide cursor-pointer">Dashboard</label>
+                    </div>
 
-<template>
-<div class="flex flex-col">
+                    
+                    </template>
+                    </menuLink>
+                    </div>
+                    </template>
+                       
 <contentCard class="mt-2 mb-4">
 <template v-slot:title>
 SALES STATISTICS
@@ -37,14 +45,22 @@ revenueMonthly.barChartData"
     </template>
             </contentCard>
         </div>
+        </div>
 </template>
             
 
 
+
 <script>
-import ContentCard from "~/components/items/ContentCard.vue";
+import ContentCard from "~/components/Items/ContentCard.vue";
 import BarChart from '~/components/charts/BarChart';
 import LineChart from '~/components/charts/LineChart';
+import MenuLink from "~/components/Items/MenuLink.vue";
+import MenuLinkList from "~/components/items/MenuLinkList.vue";
+
+
+
+
 
 const chartColors = {
 red: 'rgb(255, 99, 132)',
@@ -58,6 +74,11 @@ grey: 'rgb(201, 203, 207)'
 
 
 export default {
+
+    components:{
+        MenuLink,
+        MenuLinkList
+    },
 
 transition:{
 name:"inventory",
