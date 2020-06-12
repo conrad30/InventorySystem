@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="flex justify-between items-center">
-            <nuxt-link :to="url" class="
+            <nuxt-link :to= "url" class="
                 w-56
                 py-4
                 transition-all
@@ -14,8 +14,8 @@
                 <slot name="icon-word"></slot>
             </nuxt-link>
             <div class="px-2 py-4">
-                <button @click="showList=!showList" class="focus:outline-none active:outline-none">
-                    <i :class="{
+                <button @click = "showList=!showList" class="focus:outline-none active:outline-none">
+                    <i :class=  "{
                         'fas':true,
                         'hover:text-white':true,
                         'fa-sort-up':!showList,
@@ -24,7 +24,7 @@
                 </button>
             </div>
         </div>
-        <div :class="{
+        <div :class=    "{
             'transition-all':true,
             'duration-300':true,
             'ease-in-out':true,

@@ -1,52 +1,20 @@
 <template>
-        <div class="flex 
-            flex-col
-            w-56
-            transition-all
-            duration-500
-            ease-in-out
-            bg-gray-800
-            h-screen
-            shadow-2xl
-            pt-16
-               ">
-            
-        <menuLink
-        :url="'/dashboard'"
-            :class= "{
-                'text-gray-500':!$route.path.includes('/dashboard'),
-                'text-white':$route.path.includes('/dashboard'),
-                'hover:bg-gray-600':true,
-                'hover:text-white':true
-                        }">
-
-        <template v-slot:icon-word>
-            <div class="flex items-centerr justify-start overflow-x-hidden">
-                <i class="fas fa-home ml-6 mr-4"></i>
-                    <label class="flex-shrink-0 ml-2 text-sm font-sans tracking-wide cursor-pointer">Dashboard</label>
-                    </div>
-
-                    
-                    </template>
-                    </menuLink>
-                    </div>
-                    </template>
-                       
+<div class="flex flex-col">
 <contentCard class="mt-2 mb-4">
 <template v-slot:title>
 SALES STATISTICS
 </template>
 <template v-slot:content>
 <div class="w-full overflow-hidden p-2">
-<barChart :chartData="
+<barChart :chartdata="
 revenueMonthly.barChartData"
 :options="revenueMonthly.barChartOptions" :height="120"></barChart>
 </div>
-    </template>
-            </contentCard>
-        </div>
+        </template>
+</contentCard>
         </div>
 </template>
+
             
 
 
@@ -55,12 +23,6 @@ revenueMonthly.barChartData"
 import ContentCard from "~/components/Items/ContentCard.vue";
 import BarChart from '~/components/charts/BarChart';
 import LineChart from '~/components/charts/LineChart';
-import MenuLink from "~/components/Items/MenuLink.vue";
-import MenuLinkList from "~/components/items/MenuLinkList.vue";
-
-
-
-
 
 const chartColors = {
 red: 'rgb(255, 99, 132)',
@@ -75,10 +37,10 @@ grey: 'rgb(201, 203, 207)'
 
 export default {
 
-    components:{
+   /* components:{
         MenuLink,
         MenuLinkList
-    },
+    },*/
 
 transition:{
 name:"inventory",
