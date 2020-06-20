@@ -36,6 +36,7 @@
             'text-white':$route.path.includes('/products'),
             'cursor-pointer':true
             }"> 
+
             <template v-slot:icon-word>
             <div class="flex items-center justify-start overflowx-hidden hover:text-white">
                 <i class="fas fa-truck-loading ml-6 mr-4"></i>
@@ -43,6 +44,9 @@
 
     </div>
 </template>
+
+
+
 <template v-slot:sub-link>
           <menuLink
                 :url="'/products/new'"
@@ -59,6 +63,10 @@
 
     </template>
     </menuLink>
+
+   
+
+
     </template>
  </menuLinkList>
         </div>
@@ -75,3 +83,4 @@ export default {
     }
 }
 </script>
+
